@@ -74,11 +74,30 @@ function createFullName(firstName, lastName){
 }
 console.log(createFullName('Tyler', 'Lambert'))
 
-//!!//Write a function that takes an array of numbers and returns true if the sume of all the numbers in the array is greater than 100
-
+//!!//Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100
+function isGreaterThan100(array){
+    let sum = 0;
+    for(i = 0; i < array.length; i++){
+        sum += array[i];
+    } if (sum > 100){
+        return true;
+    } else{
+        return false;
+    }
+}
+console.log(isGreaterThan100(ages));
 
 //!!//Write a function that takes an array of numbers and returns the average of all the elements in the array
+function averageOfElements(array){
+    let sum = 0;
+    for(i = 0; i < array.length; i++){
+        sum += array[i];
+    }return sum/array.length;
+}
+console.log(averageOfElements(ages));
 
+
+//!!//Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array
 
 
 //!!//Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array
@@ -93,3 +112,5 @@ function willBuyDrink(isHotOutside, moneyInPocket){
 console.log(willBuyDrink(true, 100));
 
 //!!//Create a function of your own that solves a problem. In comments, write what the function does and why you created it.
+
+
