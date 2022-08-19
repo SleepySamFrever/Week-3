@@ -79,6 +79,9 @@ function isGreaterThan100(array){
     let sum = 0;
     for(i = 0; i < array.length; i++){
         sum += array[i];
+        //Printing the position of the i in the array to console
+        console.log("the position in the array:", array[i]);
+        console.log("total length", sum);
     } if (sum > 100){
         return true;
     } else{
@@ -102,7 +105,7 @@ console.log(averageOfElements(ages));
 
 //!!//Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array
 
-//Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50\
+//Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50
 let isHotOutside = true;
 moneyInPocket = 100
 function willBuyDrink(isHotOutside, moneyInPocket){
