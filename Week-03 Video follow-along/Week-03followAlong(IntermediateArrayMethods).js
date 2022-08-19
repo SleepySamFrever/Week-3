@@ -15,7 +15,7 @@ Map-used to invoke a function for each element in an array, then create a new ar
 
 let names = ['Sam', 'Tom', 'Eric', 'Sally', 'Nicholas'];
 
-//Use Map method to creat new array that has the lengths of the strings in the above array.
+//Use Map method to create new array that has the lengths of the strings in the above array.
 //Map takes a function and calls the function for each element in the array. The return is going to be an element in our new array.
 //First time function gets called it passes in the the "Sam" element from above, so on and so forth.
 

@@ -20,7 +20,7 @@ function myFunction(){
 myFunction();
 
 //Note we can put anything inside function. Loops, conditions, variables, etc. Makes code reusable.
-//Some functions takes input to maek it more dynamic (parameters)
+//Some functions takes input to make it more dynamic (parameters)
 //Parameters are used when making functions and placed in the parentheses. Try to use no more than 3.
 //Try to make sure a function accomplishes one thing, or consider splitting it into multiple functions.
 
@@ -50,6 +50,7 @@ console.log(createFullName('Tom', 'Sawyer'));
 //You can store the value of the return statement as a variable.
 
 var fullName = createFullName('Tom', 'Sawyer');
+
 console.log('Welcome', fullName);
 
 //Functions should have descriptive names with verbs since they are actions.
