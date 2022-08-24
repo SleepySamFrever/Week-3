@@ -48,9 +48,12 @@ console.log(names[names.length - 1]);
 //Since arrays use a 0 index, we can simply call for the element at position '0'
 console.log(names[0]);
 
-//!!//Create a new array called nameLengths.
-//!!//Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
-
+//Create a new array called nameLengths.
+//Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
+let nameLengths = [];
+for (i = 0; i < names.length; i++){
+    nameLengths.push(names[i].length);
+}console.log("The nameLengths array", nameLengths);
 
 
 
@@ -74,12 +77,12 @@ function createFullName(firstName, lastName){
 }
 console.log(createFullName('Tyler', 'Lambert'))
 
-//!!//Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100
+//Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100
 function isGreaterThan100(array){
     let sum = 0;
     for(i = 0; i < array.length; i++){
         sum += array[i];
-        //Printing the position of the i in the array to console
+        //Printing the position of the i in the array to console(Test)
         console.log("the position in the array:", array[i]);
         console.log("total length", sum);
     } if (sum > 100){
@@ -90,7 +93,7 @@ function isGreaterThan100(array){
 }
 console.log(isGreaterThan100(ages));
 
-//!!//Write a function that takes an array of numbers and returns the average of all the elements in the array
+//Write a function that takes an array of numbers and returns the average of all the elements in the array
 function averageOfElements(array){
     let sum = 0;
     for(i = 0; i < array.length; i++){
@@ -98,12 +101,25 @@ function averageOfElements(array){
     }return sum/array.length;
 }
 console.log(averageOfElements(ages));
+//We can use "Math.round" to get a nice round number
+console.log(Math.round(averageOfElements(ages)));
 
 
-//!!//Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array
-
-
-//!!//Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array
+//Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array
+function isFirstGreater(array1, array2){
+    let array1Sum = 0;
+    for (i = 0; i < array1.length; i++){
+        array1Sum+= array1[i];
+    }let array1Average = array1Sum/array1.length;
+    let array2Sum = 0;
+//Now we do the same for our 2nd array.
+    for (i = 0; i < array2.length; i++){
+        array2Sum+= array2[i];
+    }let array2Average = array2Sum/array2.length;
+    if(array1Average > array2Average)
+        return array1Average > array2Average ? true : false;
+    
+}console.log(isFirstGreater([12, 56, 22, 2, 97], [46, 11, 1, 4, 22]));
 
 //Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50
 let isHotOutside = true;
@@ -115,5 +131,16 @@ function willBuyDrink(isHotOutside, moneyInPocket){
 console.log(willBuyDrink(true, 100));
 
 //!!//Create a function of your own that solves a problem. In comments, write what the function does and why you created it.
+function canIPlayVideoGames(choresDone, kidsAsleep){
+    if(choresDone == true && kidsAsleep == true){
+        return "It's game time!"
+    }else{
+        return "Not yet."
+    }
+}
 
-
+//Now let's test our function with a few different values
+console.log(canIPlayVideoGames(true, true));
+console.log(canIPlayVideoGames(false, true));
+console.log(canIPlayVideoGames(true, false));
+console.log(canIPlayVideoGames(false, false));
